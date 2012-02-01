@@ -10,6 +10,7 @@
     sudo rabbitmqctl add_vhost /my_vhost
     sudo rabbitmqctl set_permissions -p /my_vhost my_rabbit_user ".*" ".*" ".*"
 
+**Install application**
 
     mkdir testcelery; cd testcelery
     virtualenv --no-site-packages .
