@@ -46,6 +46,23 @@ In separate terminals after activating each of them
 
     >>> result.task_name
     'cel.tasks.add'
+    
+    >>> result.result
+    3
+    
+    >>> from datetime import datetime, timedelta
+    >>> result = tasks.add.apply_async(args=[1,2], eta=datetime.now() + timedelta(seconds=5))
+    >>> result.result
+    3
+    
+    >>> result = tasks.add.apply_async(args=[1,2],countdown=10) 
+    >>> result.ready()
+    False
+    >>> result.wait()
+    3
+
+
+    
 
     
     
