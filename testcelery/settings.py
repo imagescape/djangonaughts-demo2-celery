@@ -158,4 +158,5 @@ INSTALLED_APPS += (
 'djcelery', # django-celery
 )
 
-
+#CELERYD_PREFETCH_MULTIPLIER=128
+#BROKER_POOL_LIMIT=10
