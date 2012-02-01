@@ -6,14 +6,14 @@
     sudo rabbitmqctl set_permissions -p /my_vhost my_rabbit_user ".*" ".*" ".*"
 
 
-mkdir testcelery; cd testcelery
-virtualenv --no-site-packages .
-. ./bin/activate 
-pip install django celery django-celery
-mkdir proj/; cd proj/
-django-admin startproject testcelery 
-cd testcelery
-./manage.py syncdb 
+    mkdir testcelery; cd testcelery
+    virtualenv --no-site-packages .
+    . ./bin/activate 
+    pip install django celery django-celery
+    mkdir proj/; cd proj/
+    django-admin startproject testcelery 
+    cd testcelery
+    ./manage.py syncdb 
 
 
 **Run celery services:**  
