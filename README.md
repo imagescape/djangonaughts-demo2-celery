@@ -1,3 +1,8 @@
+**Install System Requirements**
+    
+    sudo aptitude install build-essential 
+    sudo aptitude install git-core
+
 **Install and Configure RabbitMQ**
 
     sudo aptitude install rabbitmq-server
