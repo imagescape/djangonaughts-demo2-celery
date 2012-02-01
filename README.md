@@ -44,7 +44,8 @@ In separate terminals after activating each of them
     >>> result.task_id
     'b35e876a-2fba-4d8e-ab90-3e2aa7796f52'
 
-    
+    >>> result.task_name
+    'cel.tasks.add'
 
     
     
