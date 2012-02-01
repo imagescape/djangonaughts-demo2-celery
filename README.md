@@ -10,8 +10,8 @@
     virtualenv --no-site-packages .
     . ./bin/activate 
     pip install django celery django-celery
-    mkdir proj/; cd proj/
-    django-admin startproject testcelery 
+    git clone git://github.com/imagescape/djangonaughts-demo2-celery.git proj/
+    cd proj/
     cd testcelery
     ./manage.py syncdb 
 
