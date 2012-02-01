@@ -29,6 +29,22 @@ In separate terminals after activating each of them
     
     ./manage.py shell 
     
+    >>> from cel import tasks 
+    >>> result = tasks.add.apply_async(args=[1,2])
     
+    >>> result.state
+    u'SUCCESS'
+    
+    >>> result.successful()
+    True
+    
+    >>> result.failed()
+    False
+
+    >>> result.task_id
+    'b35e876a-2fba-4d8e-ab90-3e2aa7796f52'
+
+    
+
     
     
