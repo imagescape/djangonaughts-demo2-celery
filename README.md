@@ -17,7 +17,7 @@
 
 
 **Run celery services**  
-In separate terminals after activating each of them
+In separate terminals after activating each of them, execute the following: 
 
     ./manage.py runserver
     ./manage.py celeryd -EB -l info 
