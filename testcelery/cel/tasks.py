@@ -12,7 +12,7 @@ def subtract(x, y):
 
 @task
 def start(contest_id, **kwargs):
-    from myapp import models
+    from cel import models
     contest = models.Contest.objects.get(id=contest_id)
     contest.status = 1  # started status
     contest.save()
@@ -21,7 +21,7 @@ def start(contest_id, **kwargs):
 
 @task
 def end(contest_id, **kwargs):
-    from myapp import models
+    from cel import models
     contest = models.Contest.objects.get(id=contest_id)
     contest.status = 2  # stopped status
     contest.save()
