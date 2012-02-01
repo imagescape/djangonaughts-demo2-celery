@@ -61,8 +61,23 @@ In separate terminals after activating each of them, execute the following:
     >>> result.wait()
     3
 
+    Run with some Django Models: 
 
+    >>> from cel import models, tasks
+    >>> from datetime import datetime, timedelta
+    >>> c = models.Contest(name="Joe's contest", 
+                           start_date=datetime.now() + timedelta(minutes=3), 
+                           end_date=datetime.now() + timedelta(minutes=4) )
+    >>> c.save()
+    >>> c.status
     
+    >>> result = tasks.start.apply_async(args=[c.id])
+    >>> result.wait()
+
+    # we do this because Django caches the object. Need to refresh
+    >>> c = models.Contest.objects.get(id=c.id)
+    >>> c.status
+    2    
 
     
     
