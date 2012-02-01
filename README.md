@@ -16,10 +16,19 @@
     ./manage.py syncdb 
 
 
-**Run celery services:**  
-in separate terminals after activating each of them
+**Run celery services**  
+In separate terminals after activating each of them
 
     ./manage.py runserver
     ./manage.py celeryd -EB -l info 
     ./manage.py celerycam 
     ./manage.py celeryev 
+
+
+**Execute a Django Shell to begin experimenting**
+    
+    ./manage.py shell 
+    
+    
+    
+    
