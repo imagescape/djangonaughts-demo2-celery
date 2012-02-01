@@ -1,0 +1,4 @@
+celerybeat-schedule
+celeryev.pid
+*.pyc
+test.db
